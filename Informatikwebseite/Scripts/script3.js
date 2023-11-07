@@ -1,4 +1,3 @@
-// Exportiert die Tabelle in eine CSV-Datei
 function exportTableToCSV(filename) {
     const csv = [];
     const rows = document.querySelectorAll("table tr");
@@ -23,7 +22,6 @@ function exportTableToCSV(filename) {
     link.click();
 }
 
-// Druckt die Tabelle
 function printTable() {
     const printContents = document.getElementById("teilnehmer-tabelle").outerHTML;
     const originalContents = document.body.innerHTML;
