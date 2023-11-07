@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verbindung zur Datenbank herstellen (Sie müssen die Verbindungsinformationen anpassen)
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -8,19 +8,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Überprüfen der Verbindung
     if ($conn->connect_error) {
         die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
     }
 
-    // Daten aus dem Formular abrufen und bereinigen
     $vorname = mysqli_real_escape_string($conn, $_POST['vorname']);
     $nachname = mysqli_real_escape_string($conn, $_POST['nachname']);
     $schwimmkurs = mysqli_real_escape_string($conn, $_POST['schwimmkurs']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $nachricht = mysqli_real_escape_string($conn, $_POST['nachricht']);
 
-    // SQL-Befehl zum Einfügen der Daten in die Tabelle (Sie müssen die Tabelle anpassen)
     $sql = "INSERT INTO teilnehmerliste (vorname, nachname, schwimmkurs, email, nachricht)
             VALUES ('$vorname', '$nachname', '$schwimmkurs', '$email', '$nachricht')";
 
@@ -30,7 +27,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         echo "Fehler beim Eintragen der Daten: " . $conn->error;
     }
 
-    // Verbindung zur Datenbank schließen
     $conn->close();
 }
 ?>
