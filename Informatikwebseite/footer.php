@@ -8,4 +8,4 @@
         </ul>
     </div>
 </footer>
-<link rel="stylesheet" href="headerfooter.css"> <!-- Verlinke die neue CSS-Datei -->
+<link rel="stylesheet" href="headerfooter.css">
