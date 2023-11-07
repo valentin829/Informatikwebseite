@@ -2,7 +2,7 @@
 session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Verbindung zur Datenbank herstellen (Sie müssen die Verbindungsinformationen anpassen)
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -10,17 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $conn = new mysqli($servername, $username, $password, $dbname);
 
-    // Überprüfen der Verbindung
     if ($conn->connect_error) {
         die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
     }
 
-    // Daten aus dem Anmeldeformular abrufen
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $passwort = mysqli_real_escape_string($conn, $_POST['passwort']); // Änderung des Namens auf 'passwort'
+    $passwort = mysqli_real_escape_string($conn, $_POST['passwort']);
 
-    // SQL-Befehl zur Überprüfung der Anmeldedaten (Sie müssen die Tabelle und Felder anpassen)
-    $sql = "SELECT * FROM trainerliste WHERE Email = '$email' AND Passwort = '$passwort'"; // Änderung des Namens auf 'Passwort'
+    $sql = "SELECT * FROM trainerliste WHERE Email = '$email' AND Passwort = '$passwort'";
 
     $result = $conn->query($sql);
 
@@ -28,14 +25,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $row = $result->fetch_assoc();
         $_SESSION['username'] = $row['Email'];
         $_SESSION['trainer_id'] = $row['Trainer-ID'];
-        $_SESSION['role'] = 'Trainer'; // Setze die Benutzerrolle auf "Trainer"
+        $_SESSION['role'] = 'Trainer';
         header("Location: startseite.php");
         exit();
     } else {
         echo "Anmeldung fehlgeschlagen. <a href='index.html'>Zurück zur Anmeldeseite</a>";
     }
 
-    // Verbindung zur Datenbank schließen
     $conn->close();
 }
 ?>
@@ -49,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W+F Münster | Trainer-Login</title>
     <link rel="icon" type="image/jpg" href="Img/logo.jpg">
-    <link rel="stylesheet" href="styles/style12.css"> <!-- Verwende den gleichen CSS-Dateinamen wie auf der ersten Seite -->
+    <link rel="stylesheet" href="styles/style12.css">
 </head>
 <body>
     <header>
@@ -68,7 +64,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </nav>
     </header>
     <main>
-        <!-- Hier fügst du den Inhalt deiner zweiten Seite ein -->
         <h1>Login</h1>
         <form method="post" action="login.php">
             <label for="email">Email-Adresse:</label>
