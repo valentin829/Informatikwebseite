@@ -22,18 +22,18 @@ h1 {
 }
 
 .startseiten-button {
-    background-color: #0077b6; /* Hintergrundfarbe des Buttons */
-    color: #fff; /* Textfarbe des Buttons */
-    border: none; /* Kein Rand um den Button */
-    padding: 10px 20px; /* Innenabstand (oben/unten, links/rechts) */
+    background-color: #0077b6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
     cursor: pointer;
-    font-size: 16px; /* Textgröße */
-    border-radius: 5px; /* Abrundung der Ecken */
-    text-decoration: none; /* Entfernt Unterstreichung (Standard-Link-Stil) */
+    font-size: 16px;
+    border-radius: 5px;
+    text-decoration: none;
     display: inline-block;
     margin-top: 10px;
 }
 
 .startseiten-button:hover {
-    background-color: #005c8f; /* Hintergrundfarbe beim Hover-Effekt */
+    background-color: #005c8f;
 }
