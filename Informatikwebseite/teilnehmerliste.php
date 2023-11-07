@@ -45,7 +45,6 @@
                     <th>Email</th>
                 </tr>
                 <?php
-                // Verbindung zur Datenbank herstellen
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
@@ -53,12 +52,10 @@
 
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Überprüfen der Verbindung
                 if ($conn->connect_error) {
                     die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
                 }
 
-                // SQL-Abfrage, um die Teilnehmerliste aus der Datenbank abzurufen
                 $sql = "SELECT vorname, nachname, schwimmkurs, email FROM teilnehmerliste ORDER BY schwimmkurs ASC";
                 $result = $conn->query($sql);
 
@@ -75,12 +72,10 @@
                     echo "Keine Teilnehmer gefunden.";
                 }
 
-                // Verbindung zur Datenbank schließen
                 $conn->close();
                 ?>
             </table>
 
-            <!-- Buttons unter der Tabelle -->
             <div class="participants-buttons">
                 <button onclick="exportTableToCSV('teilnehmerliste.csv')">Exportieren</button>
                 <button onclick="printTable()">Drucken</button>
@@ -88,7 +83,6 @@
         </section>
     </main>
 
-    <!-- JavaScript zum Exportieren und Drucken der Tabelle sowie zum Sortieren -->
     <script src="Scripts/script3.js"></script>
 
     <?php include('footer.php'); ?>
