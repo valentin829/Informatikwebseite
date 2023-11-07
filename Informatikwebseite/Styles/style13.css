@@ -1,0 +1,87 @@
+/* style.css */
+
+/* Allgemeine Stildefinitionen */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    height: 100vh; /* Vollständige Bildschirmhöhe */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+    font-size: 30px;
+}
+
+main {
+    text-align: center;
+}
+
+/* Stil für die Erfolgsmeldung */
+
+.success-message {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.success-message p {
+    margin: 10px 0;
+}
+
+/* Stil für die Infobox */
+
+.info {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.info-content {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#uhr, #freischalt-uhrzeit {
+    font-size: 24px;
+    color: #333;
+}
+
+#freischalt-button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; /* Größere Schaltfläche */
+    font-size: 18px; /* Größere Schriftgröße */
+    border-radius: 10px; /* Runder Rand */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Sanfter Übergang */
+}
+
+#freischalt-button:hover {
+    background-color: #45a049;
+}

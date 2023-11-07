@@ -1,0 +1,33 @@
+/* Hier kannst du dein CSS für die Profilseite hinzufügen */
+
+/* Beispiel-Styling für den Profilcontainer */
+.profile-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Beispiel-Styling für den Abmelden-Button */
+#logout-button {
+    margin-top: 10px;
+    background-color: #ff3333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Beispiel-Styling für Profildaten */
+#profile-content p {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Beispiel-Styling für Links zur Anmeldung und Registrierung */
+#profile-content a {
+    text-decoration: underline;
+}
