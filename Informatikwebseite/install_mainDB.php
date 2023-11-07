@@ -8,7 +8,6 @@
     <?php
     $id = mysqli_connect("localhost", "root", "") or die("Kein MySQL gefunden/gestartet!");
 
-    // Datenbank "schwimmwebseite" erstellen oder verwenden
     mysqli_query($id, "CREATE DATABASE IF NOT EXISTS schwimmwebseite");
     mysqli_query($id, "USE schwimmwebseite");
 
