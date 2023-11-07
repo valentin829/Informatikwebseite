@@ -14,10 +14,8 @@
 
     $dbName = "schwimmwebseite";
 
-    // Zur Datenbank wechseln
     mysqli_select_db($conn, $dbName);
 
-    // Tabelle für die Anwesenheitsliste erstellen
     $createTableQuery = "CREATE TABLE IF NOT EXISTS attendance (
         id INT AUTO_INCREMENT PRIMARY KEY,
         child_name VARCHAR(255) NOT NULL,
