@@ -1,13 +1,9 @@
-/* style.css */
-
-/* Allgemeine Stildefinitionen */
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
     padding: 0;
-    height: 100vh; /* Vollständige Bildschirmhöhe */
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -38,8 +34,6 @@ main {
     text-align: center;
 }
 
-/* Stil für die Erfolgsmeldung */
-
 .success-message {
     background-color: #4CAF50;
     color: #fff;
@@ -50,8 +44,6 @@ main {
 .success-message p {
     margin: 10px 0;
 }
-
-/* Stil für die Infobox */
 
 .info {
     margin-top: 20px;
@@ -75,11 +67,11 @@ main {
     background-color: #4CAF50;
     color: #fff;
     border: none;
-    padding: 15px 30px; /* Größere Schaltfläche */
-    font-size: 18px; /* Größere Schriftgröße */
-    border-radius: 10px; /* Runder Rand */
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 10px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Sanfter Übergang */
+    transition: background-color 0.3s ease;
 }
 
 #freischalt-button:hover {
