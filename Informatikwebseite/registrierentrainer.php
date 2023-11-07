@@ -1,6 +1,5 @@
         <?php
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // Verbindung zur Datenbank herstellen (Sie müssen die Verbindungsinformationen anpassen)
         $servername = "localhost";
         $username = "root";
         $password = "";
@@ -8,32 +7,25 @@
 
         $conn = new mysqli($servername, $username, $password, $dbname);
 
-        // Überprüfen der Verbindung
         if ($conn->connect_error) {
             die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
         }
 
-        // Daten aus dem Formular abrufen und bereinigen
         $trainer_vorname = mysqli_real_escape_string($conn, $_POST['trainer_vorname']);
         $trainer_nachname = mysqli_real_escape_string($conn, $_POST['trainer_nachname']);
         $trainer_email = mysqli_real_escape_string($conn, $_POST['trainer_email']);
         $trainer_passwort = mysqli_real_escape_string($conn, $_POST['trainer_passwort']);
 
-        // SQL-Befehl zum Einfügen der Daten in die Trainer-Tabelle (Sie müssen die Tabelle anpassen)
         $trainer_sql = "INSERT INTO trainerliste (vorname, nachname, email, passwort)
                 VALUES ('$trainer_vorname', '$trainer_nachname', '$trainer_email', '$trainer_passwort')";
 
         if ($conn->query($trainer_sql) === TRUE) {
-        // Erfolgreiche Anmeldung des Trainers
-        // Leite den Benutzer auf die Erfolgsseite weiter
         header("Location: registration_success.html");
-        exit(); // Beende das aktuelle Skript
+        exit();
         } else {
             echo "Fehler beim Eintragen der Trainerdaten: " . $conn->error;
         }   
 
-
-        // Verbindung zur Datenbank schließen
         $conn->close();
     }
     ?>
@@ -44,7 +36,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W+F Münster | Trainer-Registrierung</title>
-    <link rel="stylesheet" href="styles/style14.css"> <!-- Verweise auf die neue CSS-Datei -->
+    <link rel="stylesheet" href="styles/style14.css">
     <link rel="icon" type="image/jpg" href="Img/logo.jpg">
 </head>
 <body>
@@ -65,7 +57,7 @@
     </header>
 
     <main>
-        <h1 style="color: black;">Registrieren</h1> <!-- Überschrift außerhalb des Containers -->
+        <h1 style="color: black;">Registrieren</h1>
         
 
 
