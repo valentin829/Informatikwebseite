@@ -1,4 +1,4 @@
-# Informatikwebseite
+Informatikwebseite
 
 Hallo Herr Müller,
 dies ist das Inforamtikprojekt, hier ist eine kleine Hilfe, damit sie sich zurecht finden:
