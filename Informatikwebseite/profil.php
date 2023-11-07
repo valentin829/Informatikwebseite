@@ -28,25 +28,21 @@
             <?php
             session_start();
             if(isset($_SESSION['role']) && $_SESSION['role'] == 'Trainer') {
-                // Verbindung zur Datenbank herstellen (Verbindungsinformationen anpassen)
                 $servername = "localhost";
                 $username = "root";
                 $password = "";
                 $dbname = "schwimmwebseite";
                 $conn = new mysqli($servername, $username, $password, $dbname);
 
-                // Überprüfen der Verbindung
                 if ($conn->connect_error) {
                     die("Verbindung zur Datenbank fehlgeschlagen: " . $conn->connect_error);
                 }
 
-                // Trainerdaten aus der Datenbank abrufen
                 $trainer_id = $_SESSION['trainer_id'];
                 $sql = "SELECT * FROM trainerliste WHERE `Trainer-ID` = '$trainer_id'";
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                    // Trainerdaten anzeigen
                     $row = $result->fetch_assoc();
                     echo "<div class='profile-item'>Trainer-ID: <span class='value'>" . $row["Trainer-ID"] . "</span></div>";
                     echo "<div class='profile-item'>Vorname: <span class='value'>" . $row["Vorname"] . "</span></div>";
@@ -56,8 +52,6 @@
                 } else {
                     echo "Keine Trainerdaten gefunden.";
                 }
-
-                // Verbindung zur Datenbank schließen
                 $conn->close();
             } else {
                 echo "<h1> Zugriff verweigert <br>";
