@@ -1,0 +1,159 @@
+/*Stile des "Körpers" der Seite*/
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/*Kopf der Seite*/
+header {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/*Stile der Navigationsleiste*/
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.nav-links {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff9900;
+}
+
+/*Der Main-Abschnitt der Seite*/
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Dies ist der Container, indem die "Success-Message" steht*/
+.container {
+    width: 800px;
+    height: 350px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 100px;
+}
+
+/*Die Stile der "success-message" an sich*/
+.success-message {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info-content1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.info-content2{
+    text-align: center;
+    margin-top: 60px;
+    font-size: 25px;
+}
+
+/*Stile des Abschnittes "Aktuelle Uhrzeit"*/
+#uhr {
+    font-size: 18px;
+    color: #333;
+}
+
+#freischalt-uhrzeit {
+    font-size: 18px;
+    color: #333;
+}
+
+#freischalt-button {
+    background-color: #003366;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/*Pseudo-Klasse*/
+#freischalt-button:hover {
+    background-color: #ff9900;
+}
+
+/*Fußzeile*/
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #003366;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*Die Social-Media-Links, die in der Fußzeile stehen*/
+.social-links {
+    margin-left: 30px;
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.social-links li {
+    margin-right: 10px;
+}
+
+.social-links img {
+    width: 20px;
+    height: 20px;
+}
